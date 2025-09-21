@@ -1,5 +1,10 @@
-IMC Software Development Project
-![workflow](https://github.com/padaukwai/Lab02/actions/workflows/main.yml/badge.svg)  
 
 # Software Engineering Methods
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/padaukwai/Lab02/main.yml/develop?style=flat-square)
+
+![Master Build Status](https://github.com/padaukwai/Lab02/actions/workflows/main.yml/badge.svg?branch=master)
+
+![Develop Build Status](https://github.com/padaukwai/Lab02/actions/workflows/main.yml/badge.svg?branch=develop)
+
+[![GitHub release](https://img.shields.io/github/release/padaukwai/REPO.svg)](https://github.com/padaukwai/DevOpsLab2/releases)
+
+![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
