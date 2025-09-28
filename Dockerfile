@@ -1,4 +1,4 @@
 FROM openjdk:19
-COPY ./target/classes/imc /tmp/imc
+COPY ./target/DevOpsClassRoom1-1-jar-with-dependencies.jar /tmp
 WORKDIR /tmp
-ENTRYPOINT ["java", "imc.com.App"]
+ENTRYPOINT ["java", "-jar","DevOpsClassRoom1-1-jar-with-dependencies.jar"]
