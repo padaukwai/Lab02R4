@@ -13,9 +13,7 @@ services:
       MYSQL_DATABASE: employees
       MYSQL_ROOT_HOST: '%'
     healthcheck:
-    test: ["CMD", "mysqladmin" ,"ping","-u","root","-pexample"]
-    interval: 5s
-    retries: 10
+ 
     volumes:
       - ./db/test_db:/docker-entrypoint-initdb.d
     ports:
