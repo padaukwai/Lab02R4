@@ -12,7 +12,7 @@ services:
       MYSQL_ROOT_PASSWORD: example
       MYSQL_DATABASE: employees
       MYSQL_ROOT_HOST: '%'
-    healthcheck:
+
     volumes:
       - ./db/test_db:/docker-entrypoint-initdb.d
     ports:
