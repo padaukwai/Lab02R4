@@ -19,4 +19,16 @@ jobs:
         run: mvn package
       - name: Run docker compose
         run: docker compose up --abort-on-container-exit
+#- name: Start containers
+  #run: docker compose up -d
+
+#- name: Wait for DB
+  #run: |
+ #  echo "Waiting for DB..."
+   # until docker exec lab02r4-db-1 mysqladmin ping -h localhost --silent; do
+#      sleep 2
+  #  done
+
+#- name: Run app
+#  run: docker compose run app
 
