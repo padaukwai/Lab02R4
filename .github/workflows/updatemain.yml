@@ -17,17 +17,6 @@ jobs:
           distribution: 'adopt'
       - name: Build with Maven
         run: mvn package
-      - name: Wait for MySQL to be ready
-        run: |
-          echo "Waiting for MySQL..."
-          docker compose exec db sh -c 'until mysqladmin ping -h "localhost" --silent; do sleep 2; done'
-
-      - name: Run Java app
-        run: |
-          docker compose exec app java -cp target/classes:$(find ~/.m2/repository -name '*.jar' | tr '\n' ':') imc.com.App
-
-      - name: Tear down containers
-        run: docker compose down  
       - name: Run docker compose
-        run: docker compose up --abort-on-container-exit
+        run: docker-compose up --abort-on-container-exit
 
