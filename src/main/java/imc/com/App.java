@@ -30,7 +30,7 @@ public class App
                 Thread.sleep(5000);
                 // Connect to database
                 //if you run java on windows
-              //  con = DriverManager.getConnection("jdbc:mysql://db:3306/employees?useSSL=false&allowPublicKeyRetrieval=true", "root", "example");
+              //  con = DriverManager.getConnection("jdbc:mysql://localhost:33060/employees?useSSL=false&allowPublicKeyRetrieval=true", "root", "example");
                 //if you run java on docker compose
                 //db:3306
                  con = DriverManager.getConnection("jdbc:mysql://db:3306/employees?useSSL=false&allowPublicKeyRetrieval=true", "root", "example");
