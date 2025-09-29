@@ -3,7 +3,7 @@ services:
   # Application Dockerfile is in same folder which is .
   app:
     build: .
-
+  entrypoint: ["./wait-for-it.sh", "db:3306", "--", "java", "-jar", "/tmp/DevOpsClassRoom1-1-jar-with-dependencies.jar"]
   # db is is db folder
   db:
     build: db/.
