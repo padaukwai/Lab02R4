@@ -1,7 +1,7 @@
 
 # Software Engineering Methods
 
-![Master Build Status](https://github.com/padaukwai/Lab02R4/actions/workflows/main.yml/badge.svg?branch=master)
+#![Master Build Status](https://github.com/padaukwai/Lab02R4/actions/workflows/main.yml/badge.svg?branch=master)
 
 ![Develop Build Status](https://github.com/padaukwai/Lab02R4/actions/workflows/main.yml/badge.svg?branch=develop1)
 
