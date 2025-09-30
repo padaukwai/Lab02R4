@@ -3,9 +3,7 @@ services:
   # Application Dockerfile is in same folder which is .
   app:
     build: .
-  depends_on:
-      db:
-        condition: service_healthy
+
   # db is is db folder
   db:
     build: db/.
@@ -14,9 +12,13 @@ services:
       MYSQL_ROOT_PASSWORD: example
       MYSQL_DATABASE: employees
       MYSQL_ROOT_HOST: '%'
-
     volumes:
       - ./db/test_db:/docker-entrypoint-initdb.d
     ports:
-      - "3306:3306"
+      - "33060:3306"
+
+   # volumes:
+  #    - ./db/test_db:/docker-entrypoint-initdb.d
+   # ports:
+     # - "3306:3306"
    # entrypoint: ["./wait-for-it.sh", "db:3306", "--", "java", "-jar", "/tmp/DevOpsClassRoom1-1-jar-with-dependencies.jar"]
