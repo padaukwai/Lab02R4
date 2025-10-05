@@ -5,6 +5,8 @@ import java.sql.*;
 
 public class App
 {
+    private Connection con = null;
+
     public void connect()
     {
         try
@@ -94,6 +96,21 @@ public class App
             return null;
         }
     }
+    public void displayEmployee(Employee emp)
+    {
+        System.out.println("display function");
+        if (emp != null)
+        {
+            System.out.println(
+                    emp.emp_no + " "
+                            + emp.first_name + " "
+                            + emp.last_name + "\n"
+                            + emp.title + "\n"
+                            + "Salary:" + emp.salary + "\n"
+                            + emp.dept_name + "\n"
+                            + "Manager: " + emp.manager + "\n");
+        }
+    }
     public static void main(String[] args)
     {
 //        try
@@ -153,12 +170,25 @@ public class App
 //            }
 //        }
         // Create new Application
-        App a = new App();
+        /*App a = new App();
 
         // Connect to database
         a.connect();
-
+        System.out.println("After connecting");
+        Employee emp = a.getEmployee(255530);
+        // Display results
+        a.displayEmployee(emp);
         // Disconnect from database
-        a.disconnect();
+        a.disconnect();*/
+        try {
+            App a = new App();
+            a.connect();
+            System.out.println("After connecting");
+            Employee emp = a.getEmployee(255530);
+            a.displayEmployee(emp);
+            a.disconnect();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
