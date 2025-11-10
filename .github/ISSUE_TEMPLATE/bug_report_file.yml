@@ -43,4 +43,16 @@ body:
       description: What actually happened
       placeholder: e.g. "The app crashes with error code 500"
 
-  - type:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include details about your setup (OS, browser, version, etc.)
+      placeholder: e.g. "Windows 11, Chrome 120.0.0"
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Optional. Add screenshots to help explain your problem
+      placeholder: "Paste images or provide links"
