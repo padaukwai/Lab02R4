@@ -1,58 +1,65 @@
 name: Bug Report
-description: Create a report to help us improve
-title: "[BUG] "
-labels: ["bug"]
-assignees: []
-
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+projects: ["padaukwai/Lab02R4"]
+assignees:
+  - padaukwai
+type: bug
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for taking the time to report a bug! Please fill out the sections below as completely as possible.
-
+        Thanks for taking the time to fill out this bug report!
   - type: input
-    id: summary
+    id: contact
     attributes:
-      label: Summary
-      description: A short description of the bug
-      placeholder: e.g. "App crashes when clicking the Save button"
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
       required: true
-
-  - type: textarea
-    id: steps_to_reproduce
+  - type: dropdown
+    id: version
     attributes:
-      label: Steps to Reproduce
-      description: Please provide a step-by-step list of how to reproduce this bug
-      placeholder: |
-        1. Go to '...'
-        2. Click on '...'
-        3. See error
+      label: Version
+      description: What version of our software are you running?
+      options:
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
+      default: 0
+    validations:
       required: true
-
-  - type: textarea
-    id: expected_behavior
+  - type: dropdown
+    id: browsers
     attributes:
-      label: Expected Behavior
-      description: What you expected to happen
-      placeholder: e.g. "The file should save successfully"
-
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
   - type: textarea
-    id: actual_behavior
+    id: logs
     attributes:
-      label: Actual Behavior
-      description: What actually happened
-      placeholder: e.g. "The app crashes with error code 500"
-
-  - type: textarea
-    id: environment
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
     attributes:
-      label: Environment
-      description: Include details about your setup (OS, browser, version, etc.)
-      placeholder: e.g. "Windows 11, Chrome 120.0.0"
-
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: Screenshots
-      description: Optional. Add screenshots to help explain your problem
-      placeholder: "Paste images or provide links"
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
