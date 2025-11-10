@@ -7,12 +7,13 @@ assignees: []
 body:
   - type: markdown
     attributes:
-        value: |
-          Thank you for taking the time to report a bug! Please fill out the sections below as completely as possible.
+      value: |
+        Thank you for taking the time to report a bug! Please fill out the sections below as completely as possible.
 
   - type: input
     id: summary
-        label: Summary
+    attributes:
+      label: Summary
       description: A short description of the bug
       placeholder: e.g. "App crashes when clicking the Save button"
       required: true
