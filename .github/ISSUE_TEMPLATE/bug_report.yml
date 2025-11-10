@@ -1,0 +1,58 @@
+name: Bug Report
+description: Create a report to help us improve
+title: "[BUG] "
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report a bug! Please fill out the sections below as completely as possible.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: A short description of the bug
+      placeholder: e.g. "App crashes when clicking the Save button"
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Please provide a step-by-step list of how to reproduce this bug
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See error
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen
+      placeholder: e.g. "The file should save successfully"
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened
+      placeholder: e.g. "The app crashes with error code 500"
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include details about your setup (OS, browser, version, etc.)
+      placeholder: e.g. "Windows 11, Chrome 120.0.0"
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Optional. Add screenshots to help explain your problem
+      placeholder: "Paste images or provide links"
